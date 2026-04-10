@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { categories } from '../data/words';
 import { User, Utensils, Users, PawPrint, Cloud } from 'lucide-react';
-import ExpertToggle from '../components/ExpertToggle';
 
 const iconMap = {
   User: <User size={32} />,
@@ -18,7 +17,6 @@ const Home = () => {
       <section className="hero-section">
         <h2>Tansi! Welcome to Vocabulary Explorer</h2>
         <p>Start your journey to learn Cree language through categories or search.</p>
-        <ExpertToggle />
       </section>
 
       <section className="categories-section">

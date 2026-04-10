@@ -61,6 +61,10 @@
 }
 
 /* Search */
+.search-row {
+  margin-bottom: 1rem;
+}
+
 .search-container {
   position: relative;
   flex: 1;
@@ -212,6 +216,11 @@
   box-shadow: var(--shadow);
 }
 
+.category-card:active, .nav-item:active, .word-card:active, button:active {
+  transform: scale(0.98);
+  transition: transform 0.1s;
+}
+
 .category-icon {
   color: var(--primary);
   margin-bottom: 1rem;
@@ -321,6 +330,12 @@
 }
 
 .save-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
   color: var(--text-light);
   transition: transform 0.2s, color 0.2s;
   padding: 0.5rem;
@@ -485,4 +500,33 @@
   border-top: 1px solid var(--border);
   color: var(--text-light);
   font-size: 0.85rem;
+}
+
+.progress-section {
+  margin-bottom: 1.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.5s ease-out;
 }

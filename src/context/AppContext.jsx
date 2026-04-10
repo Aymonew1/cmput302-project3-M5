@@ -24,10 +24,10 @@ export const AppProvider = ({ children }) => {
     setSavedWords((prev) => {
       const isSaved = prev.includes(wordId);
       if (isSaved) {
-        showFeedback('Word removed from saved list');
+        showFeedback('Removed from Saved Words');
         return prev.filter((id) => id !== wordId);
       } else {
-        showFeedback('Word saved!');
+        showFeedback('Successfully added to Saved Words');
         return [...prev, wordId];
       }
     });
@@ -35,7 +35,7 @@ export const AppProvider = ({ children }) => {
 
   const toggleExpertMode = () => {
     setExpertMode((prev) => !prev);
-    showFeedback(`Expert mode ${!expertMode ? 'enabled' : 'disabled'}`);
+    showFeedback(`Expert mode ${!expertMode ? 'enabled: showing advanced details' : 'disabled: showing simple view'}`);
   };
 
   const showFeedback = (message) => {
