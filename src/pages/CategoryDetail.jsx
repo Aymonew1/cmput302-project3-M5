@@ -15,7 +15,7 @@ const CategoryDetail = () => {
   return (
     <div className="category-detail-page">
       <Link to="/" className="back-link">
-        <ChevronLeft size={20} />
+        <ChevronLeft size={18} />
         Back to Home
       </Link>
 
