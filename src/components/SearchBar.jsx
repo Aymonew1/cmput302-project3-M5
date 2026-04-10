@@ -26,10 +26,11 @@ const SearchBar = () => {
         <Search size={20} className="search-icon" />
         <input
           type="text"
-          placeholder="Search English or Cree..."
+          placeholder="Search for Cree words..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           className="search-input"
+          aria-label="Search Cree vocabulary"
         />
       </div>
       {results.length > 0 && (
