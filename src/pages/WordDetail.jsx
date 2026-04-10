@@ -24,8 +24,8 @@ const WordDetail = () => {
   return (
     <div className="word-detail-page">
       <button onClick={() => navigate(-1)} className="back-button">
-        <ChevronLeft size={20} />
-        Back
+        <ChevronLeft size={18} />
+        Go Back
       </button>
 
       <div className="word-detail-container">
