@@ -39,7 +39,8 @@ const WordDetail = () => {
             onClick={() => toggleSaveWord(word.id)}
             aria-label={isSaved ? 'Unsave word' : 'Save word'}
           >
-            {isSaved ? <BookmarkCheck size={28} /> : <Bookmark size={28} />}
+            {isSaved ? <BookmarkCheck size={24} /> : <Bookmark size={24} />}
+            <span>{isSaved ? 'Saved' : 'Save Word'}</span>
           </button>
         </div>
 
@@ -59,11 +60,11 @@ const WordDetail = () => {
             <h3>Expert Details</h3>
             <div className="expert-info-grid">
               <div className="expert-info-item">
-                <span className="label">Word Class:</span>
+                <span className="label">Word Type:</span>
                 <span className="value">{word.wordClass}</span>
               </div>
               <div className="expert-info-item">
-                <span className="label">Morphology:</span>
+                <span className="label">Word Breakdown:</span>
                 <span className="value">{word.morphology}</span>
               </div>
             </div>

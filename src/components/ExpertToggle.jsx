@@ -21,7 +21,7 @@ const ExpertToggle = () => {
       </label>
       <p className="expert-toggle-desc">
         {expertMode
-          ? "Linguistic details (word class, morphology) are shown."
+          ? "Advanced linguistic details (word type, breakdown) are shown."
           : "Simple view for beginners."
         }
       </p>

@@ -23,7 +23,7 @@ const SearchBar = () => {
   return (
     <div className="search-container">
       <div className="search-input-wrapper">
-        <Search size={18} className="search-icon" />
+        <Search size={20} className="search-icon" />
         <input
           type="text"
           placeholder="Search English or Cree..."
