@@ -149,6 +149,7 @@ export const words = [
     wordClass: 'Verb (Inanimate Intransitive)',
     morphology: 'tahk- (cold) + -ayaw (state)',
     examples: [
+      { cree: 'Tahkayaw.', english: 'It is cold.' },
       { cree: 'Tahkayawwayaw.', english: 'It is very cold.' }
     ],
     relatedWords: ['9'],

@@ -46,13 +46,19 @@ const Layout = () => {
         <Outlet />
       </main>
 
-      <footer className="app-footer">
+      <div className="sticky-progress-bar">
         <div className="progress-section">
-          <span className="progress-label">Learning Progress: {savedWords.length} / {words.length} words saved</span>
+          <div className="progress-info">
+            <span className="progress-label">Learning Progress</span>
+            <span className="progress-count">{savedWords.length} / {words.length} words</span>
+          </div>
           <div className="progress-container">
             <div className="progress-fill" style={{ width: `${progressPercentage}%` }}></div>
           </div>
         </div>
+      </div>
+
+      <footer className="app-footer">
         <p>Built for CMPUT 302 - HCI Project</p>
       </footer>
     </div>
