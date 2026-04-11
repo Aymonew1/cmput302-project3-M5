@@ -1,8 +1,8 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { words } from '../data/words';
 import { useAppContext } from '../context/useAppContext';
-import { ChevronLeft, Volume2, Bookmark, BookmarkCheck } from 'lucide-react';
+import { ChevronLeft, Volume2, Bookmark, BookmarkCheck, Share2, Info, Network, AlertTriangle } from 'lucide-react';
 
 const WordDetail = () => {
   const { wordId } = useParams();
@@ -24,8 +24,8 @@ const WordDetail = () => {
   return (
     <div className="word-detail-page">
       <button onClick={() => navigate(-1)} className="back-button">
-        <ChevronLeft size={18} />
-        Go Back
+        <ChevronLeft size={20} />
+        Back
       </button>
 
       <div className="word-detail-container">
@@ -55,9 +55,49 @@ const WordDetail = () => {
           </div>
         </div>
 
+        {word.examples && word.examples.length > 0 && (
+          <div className="examples-section">
+            <h3>Example Usage</h3>
+            <div className="examples-list">
+              {word.examples.map((ex, idx) => (
+                <div key={idx} className="example-item">
+                  <p className="example-cree">{ex.cree}</p>
+                  <p className="example-english">{ex.english}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {expertMode && (
           <div className="expert-section">
-            <h3>Expert Details</h3>
+            <div className="expert-header">
+              <Network size={20} />
+              <h3>Semantic Network</h3>
+            </div>
+            <div className="semantic-network">
+              {word.relatedWords && word.relatedWords.length > 0 ? (
+                <div className="related-words-grid">
+                  {word.relatedWords.map((id) => {
+                    const related = words.find((w) => w.id === id);
+                    if (!related) return null;
+                    return (
+                      <Link key={id} to={`/word/${id}`} className="related-word-chip">
+                        <span className="related-cree">{related.cree}</span>
+                        <span className="related-english">{related.english}</span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              ) : (
+                <p className="no-data-text">No related words in network.</p>
+              )}
+            </div>
+
+            <div className="expert-header">
+              <Info size={20} />
+              <h3>Expert Details</h3>
+            </div>
             <div className="expert-info-grid">
               <div className="expert-info-item">
                 <span className="label">Word Type:</span>
@@ -67,6 +107,24 @@ const WordDetail = () => {
                 <span className="label">Word Breakdown:</span>
                 <span className="value">{word.morphology}</span>
               </div>
+            </div>
+
+            <div className="expert-header">
+              <Share2 size={20} />
+              <h3>Expert Notes</h3>
+            </div>
+            <div className="expert-notes">
+              <p>{word.expertNotes || "No additional linguistic notes."}</p>
+            </div>
+
+            <div className="expert-actions">
+              <button
+                className="flag-button"
+                onClick={() => showFeedback("Semantic gap flagged for review.")}
+              >
+                <AlertTriangle size={18} />
+                <span>Flag Semantic Gap</span>
+              </button>
             </div>
           </div>
         )}

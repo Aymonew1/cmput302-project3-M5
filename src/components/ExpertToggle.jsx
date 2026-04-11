@@ -15,8 +15,8 @@ const ExpertToggle = () => {
           className="expert-toggle-input"
         />
         <div className="toggle-display">
-          <Settings size={18} />
-          <span>{expertMode ? "Expert Mode On" : "Expert Mode Off"}</span>
+          <Settings size={16} />
+          <span>Expert Mode</span>
         </div>
       </label>
       <p className="expert-toggle-desc">

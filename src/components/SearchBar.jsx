@@ -26,11 +26,10 @@ const SearchBar = () => {
         <Search size={20} className="search-icon" />
         <input
           type="text"
-          placeholder="Search for Cree words..."
+          placeholder="Search English or Cree..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           className="search-input"
-          aria-label="Search Cree vocabulary"
         />
       </div>
       {results.length > 0 && (
@@ -41,8 +40,11 @@ const SearchBar = () => {
               onClick={() => handleResultClick(word.id)}
               className="search-result-item"
             >
-              <span className="result-cree">{word.cree}</span>
-              <span className="result-english">{word.english}</span>
+              <div className="result-main">
+                <span className="result-cree">{word.cree}</span>
+                <span className="result-english">{word.english}</span>
+              </div>
+              <span className="result-tag">{word.wordClass}</span>
             </li>
           ))}
         </ul>

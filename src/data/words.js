@@ -15,7 +15,13 @@ export const words = [
     pronunciation: 'mi-TSIH-tsiy',
     category: 'body',
     wordClass: 'Noun (Inanimate)',
-    morphology: 'mi- (personal prefix) + -cihciy (stem)'
+    morphology: 'mi- (personal prefix) + -cihciy (stem)',
+    examples: [
+      { cree: 'Nicihciy nispisun.', english: 'My hand is small.' },
+      { cree: 'Kicihciya kanatisiw.', english: 'Your hands are clean.' }
+    ],
+    relatedWords: ['2'],
+    expertNotes: 'Inanimate nouns in Cree often use the "mi-" prefix to indicate a generic or non-possessed form of body parts.'
   },
   {
     id: '2',
@@ -24,7 +30,12 @@ export const words = [
     pronunciation: 'mi-SKEE-sik',
     category: 'body',
     wordClass: 'Noun (Inanimate)',
-    morphology: 'mi- (personal prefix) + -skisik (stem)'
+    morphology: 'mi- (personal prefix) + -skisik (stem)',
+    examples: [
+      { cree: 'Miskisikwa miywasiwak.', english: 'The eyes are beautiful.' }
+    ],
+    relatedWords: ['1'],
+    expertNotes: 'Note the reduplication pattern in some dialects for pluralization of inanimate nouns.'
   },
   // Food
   {
@@ -34,7 +45,13 @@ export const words = [
     pronunciation: 'pah-KWE-si-kan',
     category: 'food',
     wordClass: 'Noun (Animate)',
-    morphology: 'pahkw- (to break off) + -esikan (resultative)'
+    morphology: 'pahkw- (to break off) + -esikan (resultative)',
+    examples: [
+      { cree: 'Pahkwesikan micisow.', english: 'He/she is eating bread.' },
+      { cree: 'Pahkwesikanak miywasiwak.', english: 'The breads are good.' }
+    ],
+    relatedWords: ['4'],
+    expertNotes: 'Unlike English, bread is considered an Animate noun in Cree, which affects its pluralization and verb agreement.'
   },
   {
     id: '4',
@@ -43,7 +60,12 @@ export const words = [
     pronunciation: 'WEE-yas',
     category: 'food',
     wordClass: 'Noun (Inanimate)',
-    morphology: 'wiyas (stem)'
+    morphology: 'wiyas (stem)',
+    examples: [
+      { cree: 'Wiyas kisisow.', english: 'The meat is cooking.' }
+    ],
+    relatedWords: ['3'],
+    expertNotes: 'Inanimate vs Animate distinction is crucial here; compare with "pahkwesikan".'
   },
   // Family
   {
@@ -53,7 +75,12 @@ export const words = [
     pronunciation: 'ni-GA-wiy',
     category: 'family',
     wordClass: 'Noun (Animate)',
-    morphology: 'ni- (my) + -kawiy (mother)'
+    morphology: 'ni- (my) + -kawiy (mother)',
+    examples: [
+      { cree: 'Nikawiy nimiwayan.', english: 'I love my mother.' }
+    ],
+    relatedWords: ['6'],
+    expertNotes: 'This is a dependent noun, meaning it must always occur with a possessive prefix.'
   },
   {
     id: '6',
@@ -62,7 +89,12 @@ export const words = [
     pronunciation: 'noh-TA-wiy',
     category: 'family',
     wordClass: 'Noun (Animate)',
-    morphology: 'n- (my) + -ohtawiy (father)'
+    morphology: 'n- (my) + -ohtawiy (father)',
+    examples: [
+      { cree: 'Nohtawiy atuskew.', english: 'My father is working.' }
+    ],
+    relatedWords: ['5'],
+    expertNotes: 'Dependent noun like "nikawiy". The root "-ohtawiy" cannot stand alone.'
   },
   // Animals
   {
@@ -72,7 +104,12 @@ export const words = [
     pronunciation: 'A-tim',
     category: 'animals',
     wordClass: 'Noun (Animate)',
-    morphology: 'atim (stem)'
+    morphology: 'atim (stem)',
+    examples: [
+      { cree: 'Atim pimipahtaw.', english: 'The dog is running.' }
+    ],
+    relatedWords: ['8'],
+    expertNotes: 'The plural form is "atimwak".'
   },
   {
     id: '8',
@@ -81,7 +118,12 @@ export const words = [
     pronunciation: 'MA-skwa',
     category: 'animals',
     wordClass: 'Noun (Animate)',
-    morphology: 'maskwa (stem)'
+    morphology: 'maskwa (stem)',
+    examples: [
+      { cree: 'Maskwa nibaw.', english: 'The bear is sleeping.' }
+    ],
+    relatedWords: ['7'],
+    expertNotes: 'Maskwa is a culturally significant figure in Cree oral traditions.'
   },
   // Weather
   {
@@ -91,7 +133,12 @@ export const words = [
     pronunciation: 'MI-spon',
     category: 'weather',
     wordClass: 'Verb (Inanimate Intransitive)',
-    morphology: 'mispon (stem)'
+    morphology: 'mispon (stem)',
+    examples: [
+      { cree: 'Mispon anohc.', english: 'It is snowing today.' }
+    ],
+    relatedWords: ['10'],
+    expertNotes: 'Verbs that describe weather are typically VIIs (Verb Inanimate Intransitive) in Cree.'
   },
   {
     id: '10',
@@ -100,6 +147,11 @@ export const words = [
     pronunciation: 'tah-KA-yaw',
     category: 'weather',
     wordClass: 'Verb (Inanimate Intransitive)',
-    morphology: 'tahk- (cold) + -ayaw (state)'
+    morphology: 'tahk- (cold) + -ayaw (state)',
+    examples: [
+      { cree: 'Tahkayawwayaw.', english: 'It is very cold.' }
+    ],
+    relatedWords: ['9'],
+    expertNotes: 'The root "tahk-" relates to coldness, "ayaw" relates to the state of the weather.'
   }
 ];

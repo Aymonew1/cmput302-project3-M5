@@ -15,7 +15,7 @@ const Layout = () => {
       <header className="app-header">
         <div className="header-top">
           <Link to="/" className="app-logo">
-            <BookOpen size={28} />
+            <BookOpen size={24} />
             <h1>Cree Vocabulary Explorer</h1>
           </Link>
         </div>
@@ -24,11 +24,11 @@ const Layout = () => {
         </div>
         <nav className="app-nav">
           <Link to="/" className="nav-item">
-            <Home size={22} />
+            <Home size={20} />
             <span>Home</span>
           </Link>
           <Link to="/saved" className="nav-item">
-            <Bookmark size={22} />
+            <Bookmark size={20} />
             <span>Saved Words</span>
           </Link>
           <div style={{ marginLeft: 'auto' }}>
